@@ -1,6 +1,7 @@
 FROM node:10.14.1
 # 复制本地目录下的文件  到docker容器中的指定目录
-COPY ./src/app.js /www/src/app.js
+COPY ./src/app.js /www
+COPY ./package.json /www
 WORKDIR /www
 RUN npm install
 RUN node src/app.js
